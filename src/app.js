@@ -24,7 +24,7 @@ app.set('port',process.env.PORT || 3000);
 
 //get methods *
 app.get('/',(req,res)=>res.render('view_index.ejs',{title:'Dimension Creativa || Inicio'}));
-
+app.get('/contact',(req,res)=>res.render('view_contact.ejs',{title:'Contactenos'}));
 app.get('/view_products',function(req,res){
     mod_Productos_Subli.find(function(err,Products_List){
         //console.log(Products_List)
