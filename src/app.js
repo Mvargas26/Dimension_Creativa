@@ -10,8 +10,8 @@ const app = express();
 
 //db Connection *
 connect_DB();
-
 const mod_Productos_Subli = require('./models/mod_ProductosSubli');
+
 //static Flies *
 app.use(express.static(path.join(__dirname,'public')));
 
@@ -19,8 +19,6 @@ app.use(express.static(path.join(__dirname,'public')));
 app.set('views',path.join(__dirname,'public','views'));
 app.set('view engine','ejs')
 app.set('port',process.env.PORT || 3000);
-
-//let Products_List =[{Nombre:'Botella'},{Nombre:'Camisa'}]
 
 //get methods *
 app.get('/',(req,res)=>res.render('view_index.ejs',{title:'Dimension Creativa || Inicio'}));
